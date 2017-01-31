@@ -1,0 +1,49 @@
+.select2-dropdown 
+  left: -10000px
+  width: 100%
+  border: $borde
+  display: block
+  opacity: 0.96
+  z-index: 3
+  position: absolute
+  background: $color-fondo
+  border-radius: $radio-borde
+
+.select2-results 
+  display: block
+
+.select2-results__option 
+  color: $gris-mas-oscuro
+  font-weight: 400
+  padding: ($alto-control / 4) 0
+  @include transition(color ease-in-out 0.2s, background ease-in-out 0.2s)
+  @include user-select(none)
+  &[aria-selected] 
+    cursor: pointer
+
+.select2-container--open .select2-dropdown 
+  left: 0
+  z-index: 2
+
+.select2-container--open .select2-dropdown--above 
+  box-shadow: $radio-borde-chico 0 0 0 $color-sombra, 0 -1px 0 0 $color-sombra
+  border-bottom: none
+  @include border-bottom-radius(0)
+
+.select2-container--open .select2-dropdown--below 
+  border-top: none
+  box-shadow: $radio-borde-chico 0 0 0 $color-sombra, 0 $radio-borde-chico 0 0 $color-sombra
+  @include border-top-radius(0)
+
+.select2-search--dropdown 
+  display: block
+  padding: $espaciado
+
+  .select2-search__field 
+    width: 100%
+    height: $alto-control-chico
+    &::-webkit-search-cancel-button 
+      -webkit-appearance: none
+    
+  &.select2-search--hide 
+    display: none

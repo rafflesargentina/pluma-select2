@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Componente Select2 para Pluma</title>
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Yellowtail" rel="stylesheet">
+<link media="all" type="text/css" rel="stylesheet" href="http://pluma.rafflesargentina.com/css/pluma.min.css" />
+<link media="all" type="text/css" rel="stylesheet" href="http://pluma.rafflesargentina.com/css/custom.css" />
+<link media="all" type="text/css" rel="stylesheet" href="/css/pluma-select2.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+  <div class="Loader"></div>
+  <header class="Navegacion Navegacion-Fija">
+    <div class="Caja">
+      <div class="Fila">
+        <a href="/" class="Logo">Pluma</a>
+        <nav class="Menu-Navegacion El--visible-desde-tablets">
+          <ul class="Lista-Menu-Navegacion">
+            <li class="Item-Menu-Navegacion"><a href="/">Ejemplos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="Jumbotron El--visible-desde-tablets">
+      <div class="Caja">
+        <h1>Select2</h1>
+        <h3>Ejemplos</h3>
+      </div>
+    </div>
+    <div class="Caja">
+      <div class="Fila">
+        <div class="Col-9">
+          <section>
+            <h1 class="Subrayado-Claro">Lo básico</h1>
+            <h2>Combo de selección simple</h2>
+            <p>Con Select2 podés agarrar un combo de selección común como este...</p>
+            <div class="Grupo-Formulario">
+              <select>
+                <optgroup label="Marcas de Cerveza">
+                  <option value="1">Antares</option>
+                  <option value="2">Brahma</option>
+                  <option value="3">Budweiser</option>
+                  <option value="4">Heineken</option>
+                  <option value="5">Iguana</option>
+                  <option value="6">Quilmes</option>
+                </optgroup>
+              </select>
+            </div>
+            <p>Y convertirlo en esto...</p>
+            <div class="Panel Panel-Default">
+              <div class="Cuerpo-Panel">
+                <select id="combo1" name="combo1">
+                  <optgroup label="Marcas de Cerveza">
+                    <option value="1">Antares</option>
+                    <option value="2">Brahma</option>
+                    <option value="3">Budweiser</option>
+                    <option value="4">Heineken</option>
+                    <option value="5">Iguana</option>
+                    <option value="6">Quilmes</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+            <pre>
+<code class="language-html">&lt;script type="text/javascript"&gt;</code>
+<code class="language-js">$(document).ready(function() {</code>
+<code class="language-js">  $("#combo1").select2();</code>
+<code class="language-js">});</code>
+<code class="language-html">&lt/script&gt;</code>
+<code class="language-html">&lt;select id="combo1" name="combo1"&gt;</code>
+<code class="language-html">  &lt;option value="1"&gt;Antares&lt;/option&gt;</code>
+<code class="language-html">  ...</code>
+<code class="language-html">  &lt;option value="6"&gt;Quilmes&lt;/option&gt;</code>
+<code class="language-html">&lt;/select&gt;</code>
+          </pre>
+          <h2>Combo de selección múltiple</h2>
+          <p>Select2 también soporta cambos de selección múltiple. El combo a continuación está definido con el atributo <code>multiple</code>.</p>
+          <div class="Panel Panel-Default">
+            <div class="Cuerpo-Panel">
+              <select id="combo2" name="combo2" multiple="multiple">
+                <optgroup label="Marcas de Cerveza">
+                  <option value="1">Antares</option>
+                  <option value="2">Brahma</option>
+                  <option value="3">Budweiser</option>
+                  <option value="4">Heineken</option>
+                  <option value="5">Iguana</option>
+                  <option value="6">Quilmes</option>
+                </optgroup>
+              </select> 
+            </div>
+          </div>
+          <pre>
+<code class="language-html">&lt;script type="text/javascript"&gt;</code>
+<code class="language-js">$(document).ready(function() {</code>
+<code class="language-js">  $("#combo2").select2();</code>
+<code class="language-js">});</code>
+<code class="language-html">&lt/script&gt;</code>
+<code class="language-html">&lt;select id="combo2" name="combo2" multiple="multiple"&gt;</code>
+<code class="language-html">  &lt;option value="1"&gt;Antares&lt;/option&gt;</code>
+<code class="language-html">  ...</code>
+<code class="language-html">  &lt;option value="6"&gt;Quilmes&lt;/option&gt;</code>
+<code class="language-html">&lt;/select&gt;</code>
+          </pre>
+          <h2>Combos de selección con etiquetas</h2>
+          <p>Podés, y deberías, utilizar un element <code>&lt;label&gt;</code> con Select2, como con cualquier otro elemento <code>&lt;select&gt;</code>.</p>
+          <div class="Panel Panel-Default">
+            <div class="Cuerpo-Panel">
+              <label for="combo3">Dale click a esto para enfocar el combo de selección simple</label>
+              <select id="combo3">
+                <optgroup label="Marcas de Cerveza">
+                  <option value="1">Antares</option>
+                  <option value="2">Brahma</option>
+                  <option value="3">Budweiser</option>
+                  <option value="4">Heineken</option>
+                  <option value="5">Iguana</option>
+                  <option value="6">Quilmes</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+          <pre>
+<code class="language-html">&lt;script type="text/javascript"&gt;</code>
+<code class="language-js">$(document).ready(function() {</code>
+<code class="language-js">  $("#combo3").select2();</code>
+<code class="language-js">});</code>
+<code class="language-html">&lt/script&gt;</code>
+<code class="language-html">&lt;select id="combo3" name="combo3"&gt;</code>
+<code class="language-html">  &lt;option value="1"&gt;Antares&lt;/option&gt;</code>
+<code class="language-html">  ...</code>
+<code class="language-html">  &lt;option value="6"&gt;Quilmes&lt;/option&gt;</code>
+<code class="language-html">&lt;/select&gt;</code>
+          </pre>
+        </section>
+        <section></section>
+      </div>      
+      <div class="Col-3">
+
+      </div>
+    </div>
+  </main>
+  <footer>
+
+  </footer>
+  <script type="text/javascript" src="http://pluma.rafflesargentina.com/js/pluma.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.full.min.js"></script>
+  <script>
+    $("#combo1, #combo2, #combo3").select2();
+  </script>
+</body>

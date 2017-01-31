@@ -1,0 +1,24 @@
+.select2-selection--multiple 
+  cursor: pointer
+  display: block
+  min-height: $alto-control
+  @include user-select(none)
+
+  .select2-selection__rendered 
+    display: inline-block
+    overflow: hidden
+    padding-left: ($alto-control / 4)
+    white-space: nowrap
+    text-overflow: ellipsis
+
+.select2-search--inline 
+  float: left
+  margin-top: $espaciado-chico
+  line-height: 2.6rem
+  margin-left: $espaciado-chico
+  .select2-search__field 
+    border: none
+    font-size: 100%
+
+    &::-webkit-search-cancel-button 
+      -webkit-appearance: none

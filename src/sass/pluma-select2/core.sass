@@ -1,0 +1,38 @@
+.select2-container 
+  float: left
+  width: 100% !important
+  display: inline-block
+  z-index: 9
+  vertical-align: middle
+  @import "single"
+  @import "multiple"
+
+@import "dropdown"
+
+.select2-close-mask 
+  top: 0
+  left: 0
+  width: auto
+  height: auto
+  display: block
+  opacity: 0
+  z-index: 1
+  position: fixed
+  min-width: 100%
+  min-height: 100%
+
+  // styles required for IE to work
+  background: transparent
+  filter: alpha(opacity=0)
+
+.select2-hidden-accessible 
+  clip: rect(0 0 0 0) !important
+  width: 1px !important
+  border: none !important
+  height: 1px !important
+  margin: -1px !important
+  padding: 0 !important
+  overflow: hidden !important
+  position: absolute !important
+
+@import "theme/default/layout"

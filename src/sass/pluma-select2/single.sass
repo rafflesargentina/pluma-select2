@@ -1,0 +1,18 @@
+.select2-selection--single
+  cursor: pointer
+  height: $alto-control
+  display: block
+  @include user-select(none)
+
+  .select2-selection__rendered
+    display: inline-block
+    padding: 0 ($alto-control / 4)
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+
+&[dir="rtl"]
+  .select2-selection--single
+    .select2-selection__rendered
+      padding-right: ($alto-control / 4)
+      padding-left: ($alto-control / 2)

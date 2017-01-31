@@ -1,0 +1,63 @@
+.select2-container--default 
+  @import "single"
+  @import "multiple"
+
+  &.select2-container--open.select2-container--above 
+    .select2-selection--single, .select2-selection--multiple 
+      //border-top: $borde-transparente
+      @include border-top-radius(0)
+
+  &.select2-container--open.select2-container--below 
+    .select2-selection--single, .select2-selection--multiple 
+      //border-bottom: $borde-transparente
+      @include border-bottom-radius(0)
+
+  .select2-search--dropdown 
+    .select2-search__field 
+      padding: 0
+      border-bottom: $borde-claro
+
+  .select2-search--inline 
+    .select2-search__field 
+      border: none
+      outline: 0
+      background: transparent
+      box-shadow: none
+      @include appearance(textfield)
+
+  .select2-results > .select2-results__options 
+    max-height: 20rem
+    overflow-y: auto
+
+  .select2-results__option 
+    padding-left: ($alto-control / 4)
+    &[role=group] 
+      padding: 0
+
+    &[aria-disabled=true] 
+      color: $color-variante-fondo
+
+    &[aria-selected=true] 
+      background: $color-borde-claro
+
+    .select2-results__option 
+      padding-left: ($alto-control / 2)
+
+      .select2-results__group 
+        padding-left: 0
+      
+      .select2-results__option 
+        margin-left: ($alto-control / -2)
+        padding-left: $alto-control
+
+  .select2-results__option--highlighted[aria-selected] 
+    color: $color-fondo
+    font-weight: 400
+    background-color: $color-primario
+    @include transition(color ease-in-out 0.2s, background ease-in-out 0.2s)
+
+  .select2-results__group 
+    color: $gris-oscuro
+    cursor: default
+    display: block
+    padding: ($alto-control / 4)

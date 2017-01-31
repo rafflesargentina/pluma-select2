@@ -1,0 +1,73 @@
+.select2-selection--multiple 
+  border: $borde-claro
+  cursor: text
+  background: $color-fondo
+  border-radius: $radio-borde
+
+  .select2-selection__rendered 
+    list-style: none
+    padding: 0 $espaciado-chico
+    width: 100%
+
+  .select2-selection__placeholder 
+    color: $color-borde-claro
+    float: left
+    margin-top: $espaciado-chico
+
+  .select2-selection__clear 
+    float: right
+    color: $color-borde
+    cursor: pointer
+    font-weight: 600
+    margin-top: ($alto-control / 4)
+    margin-right: ($alto-control / 4)
+
+  .select2-selection__choice 
+    float: left
+    color: $gris-oscuro
+    border: $borde
+    cursor: default
+    background: $gris-mas-claro
+    line-height: 2.2rem
+    border-radius: $radio-borde
+    margin-right: ($alto-control / 8)
+    margin-top: ($alto-control / 8)
+    padding: 0 ($alto-control / 8)
+  
+  .select2-selection__choice__remove 
+    color: $gris-oscuro
+    cursor: pointer
+    display: inline-block
+    font-weight: 600
+    margin-right: ($alto-control / 8)
+    &:hover 
+      color: $color-primario
+
+&[dir="rtl"] 
+  .select2-selection--multiple 
+    .select2-selection__choice, .select2-selection__placeholder, .select2-search--inline 
+      float: right
+
+    .select2-selection__choice 
+      margin-left: $alto-control / 8
+      margin-right: auto
+    
+    .select2-selection__choice__remove 
+      margin-left: 2px
+      margin-right: auto
+    
+&.select2-container--focus 
+  @include transition(ease-in-out .333s)
+  .select2-selection--single 
+    border-color: $color-primario
+  
+  .select2-selection--multiple 
+    border-color: $color-primario
+  
+&.select2-container--disabled 
+  .select2-selection--multiple 
+    cursor: default
+    background: $color-variante-fondo
+  
+  .select2-selection__choice__remove 
+    display: none
